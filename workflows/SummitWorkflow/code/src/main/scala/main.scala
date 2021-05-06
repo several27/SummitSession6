@@ -24,7 +24,7 @@ object Main {
     val df_Orders:        Source    = Orders(spark)
     val df_By_CustomerId: Join      = By_CustomerId(spark, df_Customers, df_Orders)
     val df_With_FullName: Reformat  = With_FullName(spark, df_By_CustomerId)
-    val df_Aggregate0:    Aggregate = Aggregate0(spark,    df_With_FullName)
+    val df_Sum_Ammounts:  Aggregate = Sum_Ammounts(spark,  df_With_FullName)
 
   }
 
