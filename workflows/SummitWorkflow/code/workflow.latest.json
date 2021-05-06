@@ -1,0 +1,151 @@
+{
+  "graph" : {
+    "processes" : {
+      "Customers" : {
+        "component" : "Source",
+        "properties" : {
+          "interim" : false,
+          "cache" : false,
+          "id" : "1810",
+          "version" : 0
+        },
+        "metadata" : {
+          "label" : "Customers",
+          "x" : 317,
+          "y" : 195
+        },
+        "ports" : {
+          "inputs" : [ ],
+          "outputs" : [ "out" ]
+        },
+        "lineage" : ""
+      },
+      "Orders" : {
+        "component" : "Source",
+        "properties" : {
+          "interim" : false,
+          "cache" : false,
+          "id" : "1811",
+          "version" : 0
+        },
+        "metadata" : {
+          "label" : "Orders",
+          "x" : 313,
+          "y" : 388
+        },
+        "ports" : {
+          "inputs" : [ ],
+          "outputs" : [ "out" ]
+        },
+        "lineage" : ""
+      },
+      "Join0" : {
+        "component" : "Join",
+        "properties" : {
+          "udf_definitions" : [ ],
+          "limit" : 0,
+          "cache" : false,
+          "detailedStats" : false,
+          "phase" : 0,
+          "joinType" : "inner",
+          "joinCondition" : {
+            "expr" : "left.customer_id = right.customer_id",
+            "format" : "sql"
+          },
+          "selectColumns" : [ {
+            "targetCol" : "customer_id",
+            "expression" : {
+              "expr" : "left.customer_id",
+              "format" : "sql"
+            }
+          }, {
+            "targetCol" : "first_name",
+            "expression" : {
+              "expr" : "left.first_name",
+              "format" : "sql"
+            }
+          }, {
+            "targetCol" : "last_name",
+            "expression" : {
+              "expr" : "left.last_name",
+              "format" : "sql"
+            }
+          }, {
+            "targetCol" : "order_id",
+            "expression" : {
+              "expr" : "right.order_id",
+              "format" : "sql"
+            }
+          }, {
+            "targetCol" : "order_status",
+            "expression" : {
+              "expr" : "right.order_status",
+              "format" : "sql"
+            }
+          }, {
+            "targetCol" : "amount",
+            "expression" : {
+              "expr" : "right.amount",
+              "format" : "sql"
+            }
+          } ]
+        },
+        "metadata" : {
+          "label" : "Join0",
+          "x" : 561,
+          "y" : 293
+        },
+        "ports" : {
+          "inputs" : [ "left", "right" ],
+          "outputs" : [ "out" ]
+        },
+        "lineage" : ""
+      }
+    },
+    "connections" : [ {
+      "src" : {
+        "process" : "Customers",
+        "port" : "out"
+      },
+      "tgt" : {
+        "process" : "Join0",
+        "port" : "left"
+      },
+      "metadata" : {
+        "route" : "e_BJQ7wsb__"
+      },
+      "lineage" : ""
+    }, {
+      "src" : {
+        "process" : "Orders",
+        "port" : "out"
+      },
+      "tgt" : {
+        "process" : "Join0",
+        "port" : "right"
+      },
+      "metadata" : {
+        "route" : "e_HkHXvjZ__"
+      },
+      "lineage" : ""
+    } ],
+    "groups" : [ ],
+    "locked" : false,
+    "metainfo" : {
+      "lastUpdated" : 1620322100696,
+      "id" : "SummitWorkflow",
+      "memory" : 1,
+      "imported" : true,
+      "language" : "scala",
+      "processors" : 1,
+      "cluster" : "local",
+      "mode" : "batch",
+      "interimMode" : "full",
+      "udfs" : null,
+      "udafs" : null,
+      "sparkOptions" : null
+    },
+    "inports" : { },
+    "outports" : { }
+  }
+}
