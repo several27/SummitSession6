@@ -241,11 +241,30 @@
         "metadata" : {
           "label" : "Sum Ammounts",
           "x" : 939,
-          "y" : 292
+          "y" : 293
         },
         "ports" : {
           "inputs" : [ "in" ],
           "outputs" : [ "out" ]
+        },
+        "lineage" : ""
+      },
+      "Target0" : {
+        "component" : "Target",
+        "properties" : {
+          "interim" : false,
+          "cache" : false,
+          "id" : "1812",
+          "version" : 0
+        },
+        "metadata" : {
+          "label" : "Target0",
+          "x" : 1135,
+          "y" : 290
+        },
+        "ports" : {
+          "inputs" : [ "in" ],
+          "outputs" : [ ]
         },
         "lineage" : ""
       }
@@ -302,11 +321,24 @@
         "route" : "e_rk6qPsWu_"
       },
       "lineage" : ""
+    }, {
+      "src" : {
+        "process" : "Sum_Ammounts",
+        "port" : "out"
+      },
+      "tgt" : {
+        "process" : "Target0",
+        "port" : "in"
+      },
+      "metadata" : {
+        "route" : "e_SkZTPsZd_"
+      },
+      "lineage" : ""
     } ],
     "groups" : [ ],
     "locked" : false,
     "metainfo" : {
-      "lastUpdated" : 1620322222450,
+      "lastUpdated" : 1620322268091,
       "id" : "SummitWorkflow",
       "memory" : 1,
       "imported" : true,

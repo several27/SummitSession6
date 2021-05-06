@@ -16,7 +16,7 @@ import udfs.UDFs._
 import udfs._
 import graph._
 
-@Visual(id = "Sum_Ammounts", label = "Sum Ammounts", x = 939, y = 292, phase = 0)
+@Visual(id = "Sum_Ammounts", label = "Sum Ammounts", x = 939, y = 293, phase = 0)
 object Sum_Ammounts {
 
   def apply(spark: SparkSession, in: DataFrame): Aggregate = {
