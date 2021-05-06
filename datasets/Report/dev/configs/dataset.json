@@ -1,5 +1,8 @@
 {
+  "description" : "",
   "datasetId" : "1812",
+  "dataFormat" : "parquet",
+  "datasetType" : "File",
   "schema" : {
     "type" : "struct",
     "fields" : [ {
@@ -39,14 +42,11 @@
       "metadata" : { }
     } ]
   },
-  "datasetType" : "File",
-  "description" : "",
   "commonProperties" : {
     "properties" : {
       "location" : "dbfs:/DatabricksSession/Report.pa/"
     }
   },
-  "dataFormat" : "parquet",
   "outputProperties" : {
     "properties" : {
       "mode" : "overwrite"
