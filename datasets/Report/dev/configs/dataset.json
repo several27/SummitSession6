@@ -1,0 +1,55 @@
+{
+  "datasetId" : "1812",
+  "schema" : {
+    "type" : "struct",
+    "fields" : [ {
+      "name" : "customer_id",
+      "type" : "integer",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "first_name",
+      "type" : "string",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "last_name",
+      "type" : "string",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "orders",
+      "type" : "long",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "order_status",
+      "type" : "string",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "amounts",
+      "type" : "double",
+      "nullable" : false,
+      "metadata" : { }
+    }, {
+      "name" : "full_name",
+      "type" : "string",
+      "nullable" : false,
+      "metadata" : { }
+    } ]
+  },
+  "datasetType" : "File",
+  "description" : "",
+  "commonProperties" : {
+    "properties" : {
+      "location" : "dbfs:/DatabricksSession/Report.pa/"
+    }
+  },
+  "dataFormat" : "parquet",
+  "outputProperties" : {
+    "properties" : {
+      "mode" : "overwrite"
+    }
+  }
+}
