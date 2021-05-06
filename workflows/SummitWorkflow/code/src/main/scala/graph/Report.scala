@@ -16,8 +16,8 @@ import udfs.UDFs._
 import udfs._
 import graph._
 
-@Visual(id = "Target0", label = "Target0", x = 1135, y = 290, phase = 0)
-object Target0 {
+@Visual(id = "Report", label = "Report", x = 1135, y = 290, phase = 0)
+object Report {
 
   @UsesDataset(id = "1812", version = 0)
   def apply(spark: SparkSession, in: DataFrame): Target = {

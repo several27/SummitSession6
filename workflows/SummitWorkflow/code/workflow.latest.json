@@ -249,8 +249,9 @@
         },
         "lineage" : ""
       },
-      "Target0" : {
+      "Report" : {
         "component" : "Target",
+        "group" : null,
         "properties" : {
           "interim" : false,
           "cache" : false,
@@ -258,7 +259,7 @@
           "version" : 0
         },
         "metadata" : {
-          "label" : "Target0",
+          "label" : "Report",
           "x" : 1135,
           "y" : 290
         },
@@ -327,7 +328,7 @@
         "port" : "out"
       },
       "tgt" : {
-        "process" : "Target0",
+        "process" : "Report",
         "port" : "in"
       },
       "metadata" : {
@@ -338,7 +339,7 @@
     "groups" : [ ],
     "locked" : false,
     "metainfo" : {
-      "lastUpdated" : 1620322268091,
+      "lastUpdated" : 1620322284634,
       "id" : "SummitWorkflow",
       "memory" : 1,
       "imported" : true,
