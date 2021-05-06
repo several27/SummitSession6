@@ -16,8 +16,8 @@ import udfs.UDFs._
 import udfs._
 import graph._
 
-@Visual(id = "Join0", label = "Join0", x = 561, y = 293, phase = 0)
-object Join0 {
+@Visual(id = "By_CustomerId", label = "By CustomerId", x = 561, y = 293, phase = 0)
+object By_CustomerId {
 
   def apply(spark: SparkSession, left: DataFrame, right: DataFrame): Join = {
     import spark.implicits._

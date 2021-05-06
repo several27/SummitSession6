@@ -3,6 +3,7 @@
     "processes" : {
       "Customers" : {
         "component" : "Source",
+        "group" : null,
         "properties" : {
           "interim" : false,
           "cache" : false,
@@ -22,6 +23,7 @@
       },
       "Orders" : {
         "component" : "Source",
+        "group" : null,
         "properties" : {
           "interim" : false,
           "cache" : false,
@@ -39,8 +41,9 @@
         },
         "lineage" : ""
       },
-      "Join0" : {
+      "By_CustomerId" : {
         "component" : "Join",
+        "group" : null,
         "properties" : {
           "udf_definitions" : [ ],
           "limit" : 0,
@@ -91,7 +94,7 @@
           } ]
         },
         "metadata" : {
-          "label" : "Join0",
+          "label" : "By CustomerId",
           "x" : 561,
           "y" : 293
         },
@@ -108,7 +111,7 @@
         "port" : "out"
       },
       "tgt" : {
-        "process" : "Join0",
+        "process" : "By_CustomerId",
         "port" : "left"
       },
       "metadata" : {
@@ -121,7 +124,7 @@
         "port" : "out"
       },
       "tgt" : {
-        "process" : "Join0",
+        "process" : "By_CustomerId",
         "port" : "right"
       },
       "metadata" : {
@@ -132,7 +135,7 @@
     "groups" : [ ],
     "locked" : false,
     "metainfo" : {
-      "lastUpdated" : 1620322100696,
+      "lastUpdated" : 1620322111304,
       "id" : "SummitWorkflow",
       "memory" : 1,
       "imported" : true,
