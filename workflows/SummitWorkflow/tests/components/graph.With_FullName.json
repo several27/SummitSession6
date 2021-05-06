@@ -1,0 +1,63 @@
+{
+  "tests" : [ {
+    "name" : "Order_status",
+    "data" : {
+      "in" : {
+        "columns" : [ "customer_id", "first_name", "last_name", "order_id", "order_status", "amount" ],
+        "values" : [ [ "26", "Waite", "Petschelt", "1", "Finished", "586.08" ], [ "26", "Waite", "Petschelt", "2", "Started", "9.85" ], [ "63", "Constance", "Sleith", "11", "Finished", "287.5" ], [ "35", "Viva", "Schulke", "12", "Finished", "514.19" ], [ "31", "Barrett", "Amies", "13", "Finished", "154.41" ], [ "51", "Kit", "Skamell", "14", "Started", "924.89" ], [ "35", "Viva", "Schulke", "15", "Started", "198.05" ], [ "100", "Gillan", "Heritege", "16", "Finished", "121.03" ], [ "94", "Ogdan", "Bussetti", "17", "Started", "551.87" ], [ "62", "Homer", "Lindstedt", "18", "Finished", "343.59" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "customer_id",
+            "type" : "integer",
+            "nullable" : true,
+            "metadata" : { }
+          }, {
+            "name" : "first_name",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : { }
+          }, {
+            "name" : "last_name",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : { }
+          }, {
+            "name" : "order_id",
+            "type" : "integer",
+            "nullable" : true,
+            "metadata" : { }
+          }, {
+            "name" : "order_status",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : { }
+          }, {
+            "name" : "amount",
+            "type" : "double",
+            "nullable" : true,
+            "metadata" : { }
+          } ]
+        },
+        "predicates" : [ ],
+        "selected" : { }
+      },
+      "out" : {
+        "columns" : [ ],
+        "values" : [ ],
+        "schema" : null,
+        "predicates" : [ {
+          "name" : "order_status",
+          "expr" : "order_status IN ('Finished', 'Started', 'Approved', 'Pending')",
+          "type" : "sql"
+        } ],
+        "selected" : {
+          "order_status" : {
+            "columns" : [ ],
+            "port" : ""
+          }
+        }
+      }
+    }
+  } ]
+}
